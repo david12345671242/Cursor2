@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>École Ohr Joseph — Inscription</title>
+  <meta name="description" content="Pré-inscription à l'École Ohr Joseph. Formulaire en ligne et informations pratiques." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="canonical" href="/inscription.html" />
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container navbar">
+      <a href="/" class="brand" aria-label="École Ohr Joseph accueil">
+        <img src="assets/images/logo.svg" alt="Logo École Ohr Joseph" width="36" height="36" />
+        <span class="brand-text">École Ohr Joseph</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a class="nav-link" href="index.html">Accueil</a>
+        <a class="nav-link" href="historique.html">Historique</a>
+        <a class="nav-link" href="inscription.html">Inscription</a>
+        <a class="nav-link" href="sorties.html">Sorties</a>
+        <a class="nav-link" href="menus.html">Menus</a>
+        <a class="nav-link" href="contacts.html">Contacts</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="button button-accent" href="inscription.html">Pré-inscription</a>
+      </div>
+      <button class="menu-toggle" data-menu-toggle aria-controls="mobile-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="container mobile-nav" aria-label="Navigation mobile">
+      <a class="nav-link" href="index.html">Accueil</a>
+      <a class="nav-link" href="historique.html">Historique</a>
+      <a class="nav-link" href="inscription.html">Inscription</a>
+      <a class="nav-link" href="sorties.html">Sorties</a>
+      <a class="nav-link" href="menus.html">Menus</a>
+      <a class="nav-link" href="contacts.html">Contacts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Pré-inscription</h1>
+        <p class="lead">Merci de compléter ce formulaire. L'équipe admissions vous recontactera rapidement pour finaliser le dossier.</p>
+
+        <div class="surface p-3 mt-3">
+          <form name="preinscription" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="merci.html" class="form">
+            <input type="hidden" name="form-name" value="preinscription" />
+            <p class="hidden" style="position:absolute; left:-10000px;">
+              <label>Ne pas remplir: <input name="bot-field" /></label>
+            </p>
+
+            <div class="form-row">
+              <div>
+                <label for="eleve-prenom">Prénom de l'élève</label>
+                <input class="input" id="eleve-prenom" name="PrenomEleve" required />
+              </div>
+              <div>
+                <label for="eleve-nom">Nom de l'élève</label>
+                <input class="input" id="eleve-nom" name="NomEleve" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="eleve-naissance">Date de naissance</label>
+                <input class="input" id="eleve-naissance" type="date" name="NaissanceEleve" required />
+              </div>
+              <div>
+                <label for="classe">Classe demandée</label>
+                <select class="select" id="classe" name="Classe" required>
+                  <option value="">Choisir…</option>
+                  <option>Maternelle</option>
+                  <option>CP</option>
+                  <option>CE1</option>
+                  <option>CE2</option>
+                  <option>CM1</option>
+                  <option>CM2</option>
+                  <option>6e</option>
+                  <option>5e</option>
+                  <option>4e</option>
+                  <option>3e</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="parent-civilite">Civilité</label>
+                <select class="select" id="parent-civilite" name="Civilite" required>
+                  <option value="">Choisir…</option>
+                  <option>Mme</option>
+                  <option>M.</option>
+                </select>
+              </div>
+              <div>
+                <label for="parent-nom">Nom et prénom du responsable</label>
+                <input class="input" id="parent-nom" name="NomPrenomParent" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="email">Email</label>
+                <input class="input" id="email" type="email" name="Email" required />
+              </div>
+              <div>
+                <label for="tel">Téléphone</label>
+                <input class="input" id="tel" type="tel" name="Telephone" required />
+              </div>
+            </div>
+
+            <div>
+              <label for="adresse">Adresse postale</label>
+              <textarea class="textarea" id="adresse" name="Adresse" rows="3" placeholder="Numéro et rue, ville, code postal" required></textarea>
+            </div>
+
+            <div>
+              <label for="infos">Informations complémentaires</label>
+              <textarea class="textarea" id="infos" name="Informations" rows="4" placeholder="Fratrie scolarisée, besoins particuliers, message…"></textarea>
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" name="Consentement" required />
+              <span>J'accepte d'être recontacté(e) par l'établissement.</span>
+            </label>
+
+            <div>
+              <button class="button button-primary" type="submit">Envoyer la demande</button>
+              <a class="button button-ghost" href="contacts.html">Nous contacter</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="frais" class="section" style="padding-top:0;">
+      <div class="container">
+        <h2 class="section-title">Frais de scolarité (indicatifs)</h2>
+        <p class="muted">Ces montants sont des exemples et seront remplacés par les tarifs officiels.</p>
+        <div class="surface p-3">
+          <table class="table">
+            <thead>
+              <tr><th>Niveau</th><th>Annuel</th><th>Modalités</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Maternelle</td><td>€[À confirmer]</td><td>10 échéances possibles</td></tr>
+              <tr><td>Élémentaire</td><td>€[À confirmer]</td><td>10 échéances possibles</td></tr>
+              <tr><td>Collège</td><td>€[À confirmer]</td><td>10 échéances possibles</td></tr>
+            </tbody>
+          </table>
+          <p class="help">Des bourses et facilités peuvent être proposées selon la situation.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>
+        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem">
+          <img src="assets/images/logo.svg" alt="Logo" width="28" height="28"/>
+          <strong>École Ohr Joseph</strong>
+        </div>
+        <p class="muted">Une éducation d'excellence, ancrée dans nos valeurs.</p>
+      </div>
+      <div>
+        <strong>Établissement</strong>
+        <ul style="list-style:none; padding:0; margin:0.5rem 0 0; display:grid; gap:0.25rem">
+          <li><a href="historique.html">Historique</a></li>
+          <li><a href="menus.html">Menus</a></li>
+          <li><a href="sorties.html">Sorties</a></li>
+          <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Admissions</strong>
+        <ul style="list-style:none; padding:0; margin:0.5rem 0 0; display:grid; gap:0.25rem">
+          <li><a href="inscription.html">Pré-inscription</a></li>
+          <li><a href="#frais">Frais de scolarité</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Suivez-nous</strong>
+        <ul style="list-style:none; padding:0; margin:0.5rem 0 0; display:grid; gap:0.25rem">
+          <li><a href="#" aria-disabled="true">Facebook</a></li>
+          <li><a href="#" aria-disabled="true">Instagram</a></li>
+          <li><a href="#" aria-disabled="true">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> École Ohr Joseph. Tous droits réservés.</span>
+      <span><a href="/">Accueil</a> • <a href="/contacts.html">Nous contacter</a></span>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

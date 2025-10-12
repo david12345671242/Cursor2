@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>École Ohr Joseph — Sorties</title>
+  <meta name="description" content="Sorties éducatives, voyages scolaires et activités culturelles de l'École Ohr Joseph." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="canonical" href="/sorties.html" />
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container navbar">
+      <a href="/" class="brand" aria-label="École Ohr Joseph accueil">
+        <img src="assets/images/logo.svg" alt="Logo École Ohr Joseph" width="36" height="36" />
+        <span class="brand-text">École Ohr Joseph</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a class="nav-link" href="index.html">Accueil</a>
+        <a class="nav-link" href="historique.html">Historique</a>
+        <a class="nav-link" href="inscription.html">Inscription</a>
+        <a class="nav-link" href="sorties.html">Sorties</a>
+        <a class="nav-link" href="menus.html">Menus</a>
+        <a class="nav-link" href="contacts.html">Contacts</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="button button-accent" href="inscription.html">Pré-inscription</a>
+      </div>
+      <button class="menu-toggle" data-menu-toggle aria-controls="mobile-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="container mobile-nav" aria-label="Navigation mobile">
+      <a class="nav-link" href="index.html">Accueil</a>
+      <a class="nav-link" href="historique.html">Historique</a>
+      <a class="nav-link" href="inscription.html">Inscription</a>
+      <a class="nav-link" href="sorties.html">Sorties</a>
+      <a class="nav-link" href="menus.html">Menus</a>
+      <a class="nav-link" href="contacts.html">Contacts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Sorties et voyages</h1>
+        <p class="lead">Des sorties qui donnent du sens aux apprentissages et ouvrent les horizons.</p>
+
+        <div class="cards mt-3">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1200&auto=format&fit=crop" alt="Musée"/>
+            <div class="card-inner">
+              <span class="badge">Culture</span>
+              <h3>Musée d'histoire</h3>
+              <p>Découverte des grandes périodes historiques à travers des œuvres clés.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Nature"/>
+            <div class="card-inner">
+              <span class="badge">Sciences</span>
+              <h3>Classe verte</h3>
+              <p>Immersion en nature, sciences et cohésion de groupe.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=1200&auto=format&fit=crop" alt="Théâtre"/>
+            <div class="card-inner">
+              <span class="badge">Arts</span>
+              <h3>Sortie théâtre</h3>
+              <p>Expression orale et sens critique au contact des œuvres.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="surface p-3 mt-3">
+          <h2 class="mt-0">Calendrier 2025 (exemple)</h2>
+          <table class="table">
+            <thead>
+              <tr><th>Date</th><th>Sortie</th><th>Classes</th><th>Détails</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Févr.</td><td>Musée d'histoire</td><td>CM1–CM2</td><td>Visite guidée, ateliers pédagogiques</td></tr>
+              <tr><td>Avr.</td><td>Classe verte</td><td>CE2–CM2</td><td>2 jours, pension complète, activités nature</td></tr>
+              <tr><td>Mai</td><td>Théâtre</td><td>Collège</td><td>Pièce contemporaine, débat en classe</td></tr>
+            </tbody>
+          </table>
+          <p class="help">Le calendrier officiel sera communiqué aux familles en début d'année.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> École Ohr Joseph. Tous droits réservés.</span>
+      <span><a href="/">Accueil</a> • <a href="/contacts.html">Nous contacter</a></span>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

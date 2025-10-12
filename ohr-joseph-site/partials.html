@@ -1,0 +1,76 @@
+<!-- Shared header and footer partials for includes via copy/paste across pages -->
+<!-- Header -->
+<header class="header" role="banner">
+  <div class="container navbar">
+    <a href="/" class="brand" aria-label="École Ohr Joseph accueil">
+      <img src="assets/images/logo.svg" alt="Logo École Ohr Joseph" width="36" height="36" />
+      <span class="brand-text">École Ohr Joseph</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a class="nav-link" href="index.html">Accueil</a>
+      <a class="nav-link" href="historique.html">Historique</a>
+      <a class="nav-link" href="inscription.html">Inscription</a>
+      <a class="nav-link" href="sorties.html">Sorties</a>
+      <a class="nav-link" href="menus.html">Menus</a>
+      <a class="nav-link" href="contacts.html">Contacts</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="button button-accent" href="inscription.html">Pré-inscription</a>
+    </div>
+    <button class="menu-toggle" data-menu-toggle aria-controls="mobile-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <nav id="mobile-nav" class="container mobile-nav" aria-label="Navigation mobile">
+    <a class="nav-link" href="index.html">Accueil</a>
+    <a class="nav-link" href="historique.html">Historique</a>
+    <a class="nav-link" href="inscription.html">Inscription</a>
+    <a class="nav-link" href="sorties.html">Sorties</a>
+    <a class="nav-link" href="menus.html">Menus</a>
+    <a class="nav-link" href="contacts.html">Contacts</a>
+  </nav>
+</header>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div>
+      <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem">
+        <img src="assets/images/logo.svg" alt="Logo" width="28" height="28"/>
+        <strong>École Ohr Joseph</strong>
+      </div>
+      <p class="muted">Une éducation d'excellence, ancrée dans nos valeurs.</p>
+    </div>
+    <div>
+      <strong>Établissement</strong>
+      <ul style="list-style:none; padding:0; margin:0.5rem 0 0; display:grid; gap:0.25rem">
+        <li><a href="historique.html">Historique</a></li>
+        <li><a href="menus.html">Menus</a></li>
+        <li><a href="sorties.html">Sorties</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Admissions</strong>
+      <ul style="list-style:none; padding:0; margin:0.5rem 0 0; display:grid; gap:0.25rem">
+        <li><a href="inscription.html">Pré-inscription</a></li>
+        <li><a href="inscription.html#frais">Frais de scolarité</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Suivez-nous</strong>
+      <ul style="list-style:none; padding:0; margin:0.5rem 0 0; display:grid; gap:0.25rem">
+        <li><a href="#" aria-disabled="true">Facebook</a></li>
+        <li><a href="#" aria-disabled="true">Instagram</a></li>
+        <li><a href="#" aria-disabled="true">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> École Ohr Joseph. Tous droits réservés.</span>
+    <span><a href="/">Accueil</a> • <a href="/contacts.html">Nous contacter</a></span>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
