@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>École Ohr Joseph — Menus</title>
+  <meta name="description" content="Menus hebdomadaires de la cantine de l'École Ohr Joseph." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="canonical" href="/menus.html" />
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container navbar">
+      <a href="/" class="brand" aria-label="École Ohr Joseph accueil">
+        <img src="assets/images/logo.svg" alt="Logo École Ohr Joseph" width="36" height="36" />
+        <span class="brand-text">École Ohr Joseph</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a class="nav-link" href="index.html">Accueil</a>
+        <a class="nav-link" href="historique.html">Historique</a>
+        <a class="nav-link" href="inscription.html">Inscription</a>
+        <a class="nav-link" href="sorties.html">Sorties</a>
+        <a class="nav-link" href="menus.html">Menus</a>
+        <a class="nav-link" href="contacts.html">Contacts</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="button button-accent" href="inscription.html">Pré-inscription</a>
+      </div>
+      <button class="menu-toggle" data-menu-toggle aria-controls="mobile-nav" aria-expanded="false" aria-label="Ouvrir le menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="container mobile-nav" aria-label="Navigation mobile">
+      <a class="nav-link" href="index.html">Accueil</a>
+      <a class="nav-link" href="historique.html">Historique</a>
+      <a class="nav-link" href="inscription.html">Inscription</a>
+      <a class="nav-link" href="sorties.html">Sorties</a>
+      <a class="nav-link" href="menus.html">Menus</a>
+      <a class="nav-link" href="contacts.html">Contacts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Menus hebdomadaires</h1>
+        <p class="lead">Cuisine respectueuse des règles de la cacherout et des besoins nutritionnels des élèves.</p>
+
+        <div class="surface p-3 mt-3">
+          <table class="table">
+            <thead>
+              <tr><th>Jour</th><th>Entrée</th><th>Plat</th><th>Accompagnement</th><th>Dessert</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Lundi</td><td>Crudités</td><td>Poulet rôti</td><td>Riz</td><td>Fruit</td></tr>
+              <tr><td>Mardi</td><td>Soupe</td><td>Pâtes sauce tomate</td><td>Salade verte</td><td>Compote</td></tr>
+              <tr><td>Mercredi</td><td>Carottes râpées</td><td>Poisson au four</td><td>Pommes de terre</td><td>Yaourt</td></tr>
+              <tr><td>Jeudi</td><td>Betteraves</td><td>Boulettes de bœuf</td><td>Semoule</td><td>Fruit</td></tr>
+              <tr><td>Vendredi</td><td>Houmous</td><td>Shnitzel</td><td>Pâtes</td><td>Tarte</td></tr>
+            </tbody>
+          </table>
+          <p class="help">Menu donné à titre indicatif et susceptible d'évoluer.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> École Ohr Joseph. Tous droits réservés.</span>
+      <span><a href="/">Accueil</a> • <a href="/contacts.html">Nous contacter</a></span>
+    </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
